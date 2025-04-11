@@ -26,6 +26,9 @@ export function App() {
 function Layout({broker}: {broker: string}) {
   const [count, setCount] = useState(0);
 
+  // Widget doesn't consume the count
+  // whenever count changes, the Widget will re-render
+  // why? could we optimize it?
   function handleClick() {
     setCount(count => count + 1);
   }
@@ -53,29 +56,7 @@ function Widget({broker}: {broker: string}) {
   );
 }
 
+// hint: could we move the component up (from Layout to App)
 {
-  /* 
-   // App.tsx
-    <App>
-        <Layout/>
-    </App> 
-
-    // Layout.tsx
-    <Layout>
-        <Header/>
-        <Content/>
-        <Footer/>
-    </Layout> 
-*/
-  /* 
-   // App.tsx
-    <App>
-       <Layout 
-            header={<Header />} 
-            content={<Content />} 
-            footer={<Footer />} 
-        />
-    </App> 
-    
-*/
+  /* <Layout widget={<Widget broker={broker} />} /> */
 }

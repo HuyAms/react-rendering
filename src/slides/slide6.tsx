@@ -6,6 +6,7 @@ export function App() {
 
   // 💣 update this state causes unnecessary re-renders
   // of the Widget
+  // we can't move the Widget outside because it depends on the broker state
   const [count, setCount] = useState(0);
 
   function handleClick() {

@@ -40,8 +40,8 @@ export const slideTitles: Record<string, {title: string; hint?: string}> = {
     hint: 'Provider Component',
   },
   'slide-10': {
-    title: 'Optimize React Context - Memorize the value 🔁',
-    hint: 'Provider Component',
+    title: 'Optimize React Context (Continue) 🔁',
+    hint: 'Memorize the value',
   },
 };
 

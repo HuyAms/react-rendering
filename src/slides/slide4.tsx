@@ -3,6 +3,8 @@ import {artificialDelay} from '../utils';
 
 // Slow re-renders
 
+// hint: const widgetComponent = <Widget />;
+
 export function App() {
   const [count, setCount] = useState(0);
 
@@ -18,12 +20,18 @@ export function App() {
           Count: {count}
         </button>
       </div>
+      {/* This got created everytime, that why it re-renders */}
+      {/* Hint: can we move the component out so it's created once */}
       <Widget />
     </div>
   );
 }
 
+// The problem is not about re-rendering
+// but some components are slow to render
+// we would like to optimize them
 function Widget() {
+  // slow!
   artificialDelay(300);
 
   return (

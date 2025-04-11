@@ -36,6 +36,7 @@ export function App() {
           Count: {count}
         </button>
       </div>
+      {/* 💣 Try to pass the doNothing to the Widget */}
       <Layout widget={<Widget broker={broker} />} />
     </div>
   );
@@ -61,7 +62,8 @@ function Layout({widget}: {widget: React.ReactNode}) {
 
 type Props = {
   broker: string;
-  // 💣
+  // 💣 someone come and pass those object, function props
+  // does the React.memo still work?
   user?: {name: string};
   doNothing?: () => void;
 };

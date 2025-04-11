@@ -22,6 +22,7 @@ export function App() {
   );
 }
 
+// Why this render? Even NO props??
 function Widget() {
   return (
     <div className="h-[200px] w-[200px] bg-green-300/50 p-2">

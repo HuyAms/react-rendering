@@ -6,6 +6,10 @@ import {BrokerContext, useBrokerContext} from '../hooks/brokerContext';
 
 function BrokerProvider({children}: {children: React.ReactNode}) {
   const [broker, setBroker] = useState('Broker 1');
+
+  // every time count changes, the value will be recreated
+  // thus, consumers will re-render
+  // hint: useMemo
   const [count, setCount] = useState(0);
 
   const value = {broker, setBroker};

@@ -6,6 +6,7 @@ import {artificialDelay, getRandomBroker} from '../utils';
 
 export function App() {
   // ✋ we need to pass this down to the Widgets (props drilling)
+  // Can we solve it with Context API?
   const [broker, setBroker] = useState('Broker 1');
 
   const [count, setCount] = useState(0);

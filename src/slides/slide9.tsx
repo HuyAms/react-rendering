@@ -16,6 +16,8 @@ export function App() {
   const value = {broker, setBroker};
 
   return (
+    // Why this BrokerContext.Provider is an issue?
+    // solution on slide 10: BrokerProvider
     <BrokerContext.Provider value={value}>
       <div className="h-[500px] bg-blue-300/50 p-2">
         <div className="mb-4">
