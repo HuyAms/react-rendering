@@ -1,0 +1,22 @@
+# Build artifacts
+dist
+build
+
+# Node modules
+node_modules
+
+# Package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Coverage reports
+coverage
+
+# Misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local 
